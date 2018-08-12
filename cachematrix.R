@@ -16,8 +16,7 @@ cacheSolve <- function(x, ...) {
         message("printing cached data...")
         return(i)
     }
-    data <- x$get()
-    print(data)
-    print(i<-solve(data,...))
+    matrx <- x$get()
+    print(i<-solve(matrx,...))
     x$setinverse(i)
 }
